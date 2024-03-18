@@ -7,6 +7,7 @@ import logo from '../assets/img/logo.svg'
 import navicon1 from '../assets/img/nav-icon1.svg'
 import navicon2 from '../assets/img/nav-icon2.svg'
 import navicon3 from '../assets/img/nav-icon3.svg'
+import navicon4 from '../assets/img/nav-icon4.svg'
 
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home')
@@ -32,9 +33,7 @@ export const NavBar = () => {
     return(
         <Navbar expand="lg" className={scrolled ? 'scrolled' : ''}>
         <Container>
-          <Navbar.Brand href="#home">
-            <img src={logo} alt="Logo"/> 
-          </Navbar.Brand>
+          
           <Navbar.Toggle aria-controls="basic-navbar-nav" >
             <span className='navbar-toggler-icon'></span>
             </Navbar.Toggle>
@@ -42,7 +41,7 @@ export const NavBar = () => {
             <Nav className="me-auto">
               <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
               <Nav.Link href="#link" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
-              <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+              <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Proyectos</Nav.Link>
               {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
@@ -57,17 +56,17 @@ export const NavBar = () => {
             </Nav>
             <span className='navbar-text'>
                 <div className='social-icon'>
-                    <a href='a'>
-                        <img src={navicon1} alt=''/>
+                    <a href='https://www.linkedin.com/in/lautaro-beber-73709b236/' target="_blank">
+                        <img src={navicon1}  alt=''/>
                     </a>
-                    <a href='a'>
-                        <img src={navicon2} alt=''/>
+                    <a href='https://github.com/lautarobeber' target="_blank">
+                        <img src={navicon4}  alt=''/>
                     </a>
-                    <a href='a'>
-                        <img src={navicon3} alt=''/>
+                    <a href='https://www.instagram.com/lautibeber' target="_blank">
+                        <img src={navicon3}  alt=''/>
                     </a>
                 </div>
-                <button className='vvd' onClick={() => console.log('connect')}><span>Let's Connect </span> </button>
+               {/*  <button className='vvd' onClick={() => console.log('connect')}><span>Let's Connect </span> </button> */}
             </span>
           </Navbar.Collapse>
         </Container>
